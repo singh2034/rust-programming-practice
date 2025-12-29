@@ -1,0 +1,9 @@
+cargo init for making new cargo file in a manual project.
+cargo new project_name :- used for new project with cargo build in it. 
+cargo is a package manager for rust programming language.
+rustc main.rs or file name :- gives you an executable file for the same project. ( but gcc/gcc+ must be installed - build essentials.)
+cargo check :- for checking the program without any executable file.
+cargo build :- gives you an executable file - ./target/debug/program_name
+rust uses snake_case strictly or gives you an error if not used correctly.
+cargo run :- directly gives you the executable file and run the program with code check.
+Programming is set of instructions :- always remember.

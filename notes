@@ -8,4 +8,4 @@
 8. cargo run :- directly gives you the executable file and run the program with code check.
 9. Programming is set of instructions :- always remember.
 10. If you do not want to make a git repo under the new cargo repo then :- cargo new project_name --vcs none
-
+ learnt mutability and immutability, variables and data types.

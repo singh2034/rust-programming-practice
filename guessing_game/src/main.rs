@@ -7,8 +7,10 @@ fn main() {
     println!("Guess the number!");
     println!(" ");
 
+    println!("Hint :- The Numbers are between 1-50!")
+
     // This will generate random numbers in between range mentioned
-    let secret_number = rand::thread_rng().gen_range(1..=10);
+    let secret_number = rand::thread_rng().gen_range(1..=50);
     // println!("The Secret Number is : {secret_number}");
 
     // loop will work as continue

@@ -6,22 +6,21 @@ Finally, add 50 to it and print the result.
 **/
 
 fn main () {
-    println!("Hello Rustceans!");
     let data = "100";
     println!("Old Data = {data}");
     println!(" ");
 
-    // Shadowing within the braces, results to a separate answer
+    // Shadowing Nested Scope
     {
-        println!("Shadow result: within the braces function ");
+        println!("Shadow result: nested Scope");
         let data:i32 = data.parse().expect("Not a Number");
         let result = data + 50;
         println!("New Data = {result}");
         println!(" ");
     }
 
-    // shadowing globally
-    println!("Shadow result: within the global function");
+    // Shadowing Same Scope
+    println!("Shadow result: same scope");
     let data:i32 = data.parse().expect("Not a valid number!");
     let result = data + 50;
     println!("Final New Data = {result}")

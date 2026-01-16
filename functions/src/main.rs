@@ -10,5 +10,4 @@ fn another_function() {
 
 fn parameter_function (x:i8) {
 println!("The value of x is : {x}");
-println!("The value of x is : {x}");
 }

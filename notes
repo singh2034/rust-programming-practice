@@ -9,3 +9,7 @@
 9. Programming is set of instructions :- always remember.
 10. If you do not want to make a git repo under the new cargo repo then :- cargo new project_name --vcs none
  learnt mutability and immutability, variables and data types.
+
+
+11. Statements and Expression :- If we are trying to give another variables value to another variables, we need to block the scope, otherwise we cannot do it, 
+for example :- let y = (let x = 5) -> we cannot do it this of things in rust. We need {block the scope of x}, then assign it to the y. 

@@ -22,7 +22,7 @@ fn main() {
     // Array containing
     let items_weight:[u16; 3] = [3500, 4200, 1800];
     // current total of all the weights
-    let current_total 
+    let current_total =
 
 
 }

@@ -17,17 +17,24 @@ The Print: Print a message like: "Ship weight: [total]. Safe to sail: [boolean].
 */
 
 fn main() {
-    
+
     // Maximum Weight of Cargo
     const MAX_WEIGHT:u32 = 10_000;
     
     // Array containing
-    let items_weight:[u16; 3] = [3500, 4200, 1800];
+    let items_weight:[u32; 3] = [3500, 4200, 1800];
     
     // current total of all the weights
-    let current_total = items_weight[0] + items_weight[1] + items_weight[2];
+    let current_total:u32 = items_weight[0] + items_weight[1] + items_weight[2];
 
-    // 
-    println!("{current_total}");
+    // boolean
+    let is_safe = current_total <= MAX_WEIGHT;
+    
+    // tuple
+    let ship_status = (current_total, is_safe);
 
+    // Destructing & print
+    let (weight, safe) = ship_status;
+    println!("Ship Weight: {weight}");
+    println!("Safe to Sail: {safe}");   
 }

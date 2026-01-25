@@ -1,9 +1,18 @@
 fn main() {
-    let number:i8  = 3;
-    
+    let number: i8 = 3;
+
     if number < 5 {
-    println!("True!");
+        println!("True!");
     } else {
-    println!("False!!");
+        println!("False!!");
+    }
+
+    another();
+}
+
+fn another() {
+    let number: i8 = 3;
+    if number != 0 {
+        println!("Number was something other than zero");
     }
 }

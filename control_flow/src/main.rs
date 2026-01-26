@@ -35,6 +35,10 @@ fn main() {
     println!("for loops");
     for_collection_through();
     println!(" ");
+
+    println!("for loops with reverse method");
+    reverse_method();
+    println!(" ");
 }
 
 fn another() {
@@ -107,9 +111,9 @@ fn while_loop() {
     println!("LIFTOFF!!");
 }
 
-// Looping through a collection using for
+// Looping through a collection using while & for :- find out which is shorter
 
-// while loop example
+// Looping through each element of a collection using a while loop
 fn while_loop_example() {
     let a: [i8; 5] = [10, 20, 30, 40, 50];
     let mut index: usize = 0;
@@ -120,10 +124,18 @@ fn while_loop_example() {
     }
 }
 
-// for loop example - shorter way
+// Looping through each element of a collection using a for loop
 fn for_collection_through() {
     let a: [i8; 5] = [10, 20, 30, 40, 50];
     for element in a {
         println!("The value is : {element}");
     }
+}
+
+// reverse method and loop
+fn reverse_method() {
+    for number in (1..7).rev() {
+        println!("{number}");
+    }
+    println!("LiftOFF!!");
 }

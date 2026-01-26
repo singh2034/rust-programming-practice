@@ -27,6 +27,14 @@ fn main() {
     println!("while loops");
     while_loop();
     println!(" ");
+
+    println!("while loop example before for");
+    while_loop_example();
+    println!(" ");
+
+    println!("for loops");
+    for_collection_through();
+    println!(" ");
 }
 
 fn another() {
@@ -97,4 +105,25 @@ fn while_loop() {
         number -= 1;
     }
     println!("LIFTOFF!!");
+}
+
+// Looping through a collection using for
+
+// while loop example
+fn while_loop_example() {
+    let a: [i8; 5] = [10, 20, 30, 40, 50];
+    let mut index: usize = 0;
+
+    while index < 5 {
+        println!("The value is: {}", a[index]);
+        index += 1;
+    }
+}
+
+// for loop example - shorter way
+fn for_collection_through() {
+    let a: [i8; 5] = [10, 20, 30, 40, 50];
+    for element in a {
+        println!("The value is : {element}");
+    }
 }

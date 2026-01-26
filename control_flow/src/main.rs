@@ -8,9 +8,21 @@ fn main() {
         println!("False!!");
     }
 
+    println!("Number Function!!");
     another();
+    println!(" ");
+
+    println!("Conditions with else and if");
     else_if();
+    println!(" ");
+
+    println!("Return values with loops");
     loops_return();
+    println!(" ");
+
+    println!("Loop Within Loop");
+    loop_within_loop();
+    println!(" ");
 }
 
 fn another() {
@@ -47,4 +59,27 @@ fn loops_return() {
         }
     };
     println!("The result is : {result}");
+}
+
+// Loop Labels || Loop withing the loop
+
+fn loop_within_loop() {
+    let mut count: i8 = 0;
+    'counting_up: loop {
+        println!("Count = {count}");
+        let mut remaining: i8 = 10;
+
+        loop {
+            println!("remaining = {remaining}");
+            if remaining == 9 {
+                break;
+            }
+            if count == 2 {
+                break 'counting_up;
+            }
+            remaining -= 1;
+        }
+        count += 1;
+    }
+    println!("End Count = {count}");
 }

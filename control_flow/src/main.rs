@@ -23,6 +23,10 @@ fn main() {
     println!("Loop Within Loop");
     loop_within_loop();
     println!(" ");
+
+    println!("while loops");
+    while_loop();
+    println!(" ");
 }
 
 fn another() {
@@ -82,4 +86,15 @@ fn loop_within_loop() {
         count += 1;
     }
     println!("End Count = {count}");
+}
+
+// while loops
+
+fn while_loop() {
+    let mut number: i8 = 3;
+    while number != 0 {
+        println!("{number}!");
+        number -= 1;
+    }
+    println!("LIFTOFF!!");
 }

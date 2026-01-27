@@ -37,4 +37,6 @@ fn main() {
     let (weight, safe) = ship_status;
     println!("Ship Weight: {weight}");
     println!("Safe to Sail: {safe}");   
+
+    // Let's start something new and use all the questions from here.
 }

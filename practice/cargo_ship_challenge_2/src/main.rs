@@ -11,11 +11,11 @@ fn main () {
     let items_weight:[i16; 4] = [10, 20, 30, 40];
 
     // For loop to look at each weight
-    for i in items_weight {
-        if i == 30 {
+    for weight in items_weight {
+        if weight == 30 {
             println!("Found the special crate! Skipping...");
         } else {
-            println!("Loading crate of weight: {i}");
+            println!("Loading crate of weight: {weight}");
         }
     }
 }

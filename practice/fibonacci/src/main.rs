@@ -1,7 +1,13 @@
 // Let's code a fibonacci sequence.
+use std::io;
 
 fn main() {
-    let n = 10;
+    println!("For which Nth term you want the sequence: (e.g. 1,2,3...) ");
+    let mut seq = String::new();
+    io::stdin()
+        .read_line(&mut seq)
+        .expect("Enter a valid number");
+    let n: u32 = seq.trim().parse().expect("Enter a valid number");
     let result = fibonacci(n);
     println!("The {}th Fibonacci number is: {}", n, result);
 }

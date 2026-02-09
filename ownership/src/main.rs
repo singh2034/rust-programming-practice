@@ -2,6 +2,23 @@ use std::io;
 
 fn main() {
     io_name();
+    ownernship_scope();
+}
+
+fn ownernship_scope() {
+    // ownership :- only one owner of each value at a time, owner goes out of scope - value will be dropped
+    // This is the scope of this value :- Scope Starts
+    let a: &str = "Hello 1st Owner";
+    {
+        // This the scope of this value :- Scope Starts
+        let b: &str = "Hello 1st Owner in a scope";
+        println!("Owner in the scope: {b}");
+        // Owner 
+        println!("owner of 1st: {a}");
+        // Scope Ends
+    }
+    println!("{a}");
+    // Scope Ends
 }
 
 // simple input & output use of the std::io library

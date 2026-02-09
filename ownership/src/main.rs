@@ -4,6 +4,7 @@ fn main() {
     io_name();
     ownernship_scope();
     string_push();
+    string_ptr();
 }
 
 fn ownernship_scope() {
@@ -42,4 +43,9 @@ fn string_push() {
     let mut s: String = String::from("Hello");
     s.push_str(", World!"); //push appends the new word in it.
     println!("{s}");
+}
+
+fn string_ptr() {
+    let s1: String = String::from("Hello");
+    let s2: String = s1;
 }

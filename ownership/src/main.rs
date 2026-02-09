@@ -3,6 +3,7 @@ use std::io;
 fn main() {
     io_name();
     ownernship_scope();
+    string_push();
 }
 
 fn ownernship_scope() {
@@ -13,7 +14,7 @@ fn ownernship_scope() {
         // This the scope of this value :- Scope Starts
         let b: &str = "Hello 1st Owner in a scope";
         println!("Owner in the scope: {b}");
-        // Owner 
+        // Owner
         println!("owner of 1st: {a}");
         // Scope Ends
     }
@@ -25,12 +26,20 @@ fn ownernship_scope() {
 fn io_name() {
     println!("What is your name?");
     // Mutable heap style String used for Heap or dynamic memory.
-    let mut name = String::new();
+    let mut name: String = String::new();
     // Taking the input from the user or in the terminal from the user
     io::stdin()
         .read_line(&mut name)
         .expect("Write a name, not a number");
     // cleaning up the result & printing the clean result without any new line or something
-    let name = name.trim();
+    let name: &str = name.trim();
     println!("Hello, {name}!");
+}
+
+// push_str function in memory || Dynamic memory allocation || HEAP || String::from() method is used for this.
+
+fn string_push() {
+    let mut s: String = String::from("Hello");
+    s.push_str(", World!"); //push appends the new word in it.
+    println!("{s}");
 }

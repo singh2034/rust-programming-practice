@@ -48,4 +48,6 @@ fn string_push() {
 fn string_ptr() {
     let s1: String = String::from("Hello");
     let s2: String = s1;
+    println!("{s2}");
+    // println!("{s1}"); //dropped memory so it will be the compile time error.
 }

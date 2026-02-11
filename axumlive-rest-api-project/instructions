@@ -1,0 +1,2 @@
+docker exec -it db psql -U user -d simple_api --pset pager=off - use this command to use the correct psql in docker
+

@@ -5,6 +5,7 @@ fn main() {
     ownernship_scope();
     string_push();
     string_ptr();
+    assignment();
 }
 
 fn ownernship_scope() {
@@ -50,4 +51,11 @@ fn string_ptr() {
     let s2: String = s1;
     println!("{s2}");
     // println!("{s1}"); //dropped memory so it will be the compile time error.
+}
+
+// scope and assignment
+fn assignment() {
+    let mut s = String::from("Hello"); //this will show the warning as the value of S is shifted in the 2nd line. But it will still work
+    s = String::from("Ahoy!");
+    println!("{s}, world!");
 }

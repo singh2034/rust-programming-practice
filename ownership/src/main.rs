@@ -6,6 +6,7 @@ fn main() {
     string_push();
     string_ptr();
     assignment();
+    clone_method();
 }
 
 fn ownernship_scope() {
@@ -58,4 +59,11 @@ fn assignment() {
     let mut s = String::from("Hello"); //this will show the warning as the value of S is shifted in the 2nd line. But it will still work
     s = String::from("Ahoy!");
     println!("{s}, world!");
+}
+
+// Variables and Data interacting with clone
+fn clone_method() {
+    let s1 = String::from("Hello");
+    let s2 = s1.clone();
+    println!("S1 = {s1}, s2 = {s2}");
 }

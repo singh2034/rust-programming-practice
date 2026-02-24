@@ -7,6 +7,8 @@ fn main() {
     string_ptr();
     assignment();
     clone_method();
+    stack_only_data();
+    ownership_and_functions();
 }
 
 fn ownernship_scope() {
@@ -66,4 +68,36 @@ fn clone_method() {
     let s1 = String::from("Hello");
     let s2 = s1.clone();
     println!("S1 = {s1}, s2 = {s2}");
+}
+
+// integers - stack only data
+
+fn stack_only_data() {
+    let x = 5;
+    let y = x;
+    println!("x = {x} & y = {y}");
+    // Note :- In this data, all the other things contradicted because integers have only fixed amount of data, that's why it is okay to not use clone method or any other method we learned above.
+}
+
+// Ownership & Functions
+
+fn ownership_and_functions() {
+    let s = String::from("Hello"); // s comes into scope
+    takes_ownership(s); //value of s moves into the functions
+    // and s is no longer valid here
+
+    let x = 5; // x comes into scope
+    makes_copy(x); // i32 implement the copy trait
+    // x does not move into the functions,
+    // so it okay to use the x afterwards, as mentioned integers have know fixed value until mutated.
+
+    fn takes_ownership(some_string: String) {
+        //some_string comes into the scope
+        println!("{some_string}");
+    } // some_string goes out of the scope and `drop` is called. The backing memory is freed
+
+    fn makes_copy(some_integer: i32) {
+        //some_integer comes into scope
+        println!("{some_integer}");
+    } // Here, some_integer goes out of scope. Nothing special happens.
 }
